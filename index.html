@@ -1,83 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Store</title>
-
-    <style>
-        body {
-            font-family: Arial;
-            background: #f5f5f5;
-            text-align: center;
-        }
-
-        h1 {
-            margin-top: 20px;
-        }
-
-        .product {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px;
-            display: inline-block;
-            width: 200px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        button {
-            background: green;
-            color: white;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: darkgreen;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+      margin-top: 20px;
+    }
+    .product {
+      display: inline-block;
+      margin: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fff;
+      width: 180px;
+    }
+    .product img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
-
 <body>
+  <h1>My Store</h1>
 
-<h1>My Store</h1>
-
-<div class="product">
-    <img src="Iphone 16.jpg">
+  <div class="product">
+    <img src="https://via.placeholder.com/150?text=iPhone+16" alt="iPhone 16">
     <h3>iPhone 16</h3>
-    <p>15000 EGP</p>
-    <button onclick="addToCart('iPhone 16')">Add to Cart</button>
-</div>
+    <button>Add to Cart</button>
+  </div>
 
-<div class="product">
-    <img src="headphones.jpg">
+  <div class="product">
+    <img src="https://via.placeholder.com/150?text=Headphones" alt="Headphones">
     <h3>Headphones</h3>
-    <p>500 EGP</p>
-    <button onclick="addToCart('Headphones')">Add to Cart</button>
-</div>
+    <button>Add to Cart</button>
+  </div>
 
-<div class="product">
-    <img src="Smart Watch.jpg">
+  <div class="product">
+    <img src="https://via.placeholder.com/150?text=Smart+Watch" alt="Smart Watch">
     <h3>Smart Watch</h3>
-    <p>1200 EGP</p>
-    <button onclick="addToCart('Smart Watch')">Add to Cart</button>
-</div>
+    <button>Add to Cart</button>
+  </div>
 
-<script>
-let cart = [];
-
-function addToCart(productName) {
-    cart.push(productName);
-    alert(productName + " added to cart!");
-    console.log("Cart:", cart);
-}
-</script>
-
+  <script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert("Item added to cart!");
+      });
+    });
+  </script>
 </body>
 </html>
