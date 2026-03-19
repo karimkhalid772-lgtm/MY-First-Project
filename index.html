@@ -2,30 +2,80 @@
 <html>
 <head>
     <title>My Store</title>
+
     <style>
-        body { font-family: Arial; text-align: center; }
-        .product { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
-        button { background: green; color: white; padding: 5px 10px; border: none; }
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
     </style>
 </head>
+
 <body>
 
 <h1>My Store</h1>
 
 <div class="product">
-    <h3>iPhone 13</h3>
+    <img src="Iphone 16.jpg">
+    <h3>iPhone 16</h3>
     <p>15000 EGP</p>
-    <button onclick="addToCart('iPhone 13')">Add to Cart</button>
+    <button onclick="addToCart('iPhone 16')">Add to Cart</button>
 </div>
 
 <div class="product">
+    <img src="headphones.jpg">
     <h3>Headphones</h3>
     <p>500 EGP</p>
     <button onclick="addToCart('Headphones')">Add to Cart</button>
 </div>
+
+<div class="product">
+    <img src="Smart Watch.jpg">
+    <h3>Smart Watch</h3>
+    <p>1200 EGP</p>
+    <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+</div>
+
 <script>
+let cart = [];
+
 function addToCart(productName) {
+    cart.push(productName);
     alert(productName + " added to cart!");
+    console.log("Cart:", cart);
 }
 </script>
 
