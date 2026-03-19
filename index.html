@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Store</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        .product { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
+        button { background: green; color: white; padding: 5px 10px; border: none; }
+    </style>
+</head>
+<body>
+
+<h1>My Store</h1>
+
+<div class="product">
+    <h3>iPhone 13</h3>
+    <p>15000 EGP</p>
+    <button onclick="addToCart('iPhone 13')">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Headphones</h3>
+    <p>500 EGP</p>
+    <button onclick="addToCart('Headphones')">Add to Cart</button>
+</div>
+<script>
+function addToCart(productName) {
+    alert(productName + " added to cart!");
+}
+</script>
+
+</body>
+</html>
